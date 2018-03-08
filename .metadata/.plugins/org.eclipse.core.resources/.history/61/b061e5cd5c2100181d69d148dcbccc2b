@@ -1,0 +1,60 @@
+
+public class PaintWizard {
+
+
+		double averageJoePrice = 17.99;
+		double duluxPaints = 25.00;
+		
+
+		int ajAreaPerLitre = 11;
+		int dpAreaPerLitre = 20;
+		
+
+		int ajLitre = 15;
+		int dpLitre = 10;
+		
+	
+	public static void main(String[] args) {
+		
+		Paint cp = new Paint("CheapoMax", 19.99, 10, 20);
+		Paint aj = new Paint("AverageJoe", 17.99, 11, 15);
+		Paint dp = new Paint("DuluxPaint", 25, 20, 10);
+		
+		System.out.println(cheapestTubOfPaint(400, cp, aj, dp));
+		System.out.println(leastWasted(200, cp, aj, dp));
+		
+		
+	}
+	
+	public static String cheapestTubOfPaint(int areaToBePainted, Paint cp, Paint aj, Paint dp) {		
+		
+		if (cp.tubsOfPaint(areaToBePainted) < aj.tubsOfPaint(areaToBePainted) 
+				&& 
+				cp.tubsOfPaint(areaToBePainted) < dp.tubsOfPaint(areaToBePainted)) {
+			return "CheapoMax costs: " + cp.tubsOfPaint(areaToBePainted) + " and is the cheapest";
+		} else if (aj.tubsOfPaint(areaToBePainted) < cp.tubsOfPaint(areaToBePainted) 
+				&& 
+				aj.tubsOfPaint(areaToBePainted) < dp.tubsOfPaint(areaToBePainted)) {
+			return "AverageJoe costs: " + aj.tubsOfPaint(areaToBePainted) + " and is the cheapest";
+		} else if (dp.tubsOfPaint(areaToBePainted) < cp.tubsOfPaint(areaToBePainted) 
+				&& 
+				dp.tubsOfPaint(areaToBePainted) < aj.tubsOfPaint(areaToBePainted)){
+			return "DuluxPaint costs: " + dp.tubsOfPaint(areaToBePainted) + " and is the cheapest";
+		}
+		return "no cheap pent mayn";
+	}
+	
+public static String leastWasted(int areaToBePainted, Paint cp, Paint aj, Paint dp) {		
+		
+		if (cp.waste(areaToBePainted) < aj.waste(areaToBePainted) 
+				&& 
+				cp.waste(areaToBePainted) < dp.waste(areaToBePainted)) {
+			return "CheapoMax wastes: " + cp.waste(areaToBePainted) + " and is the lowest wasted";
+		} else if (aj.waste(areaToBePainted) < cp.waste(areaToBePainted) 
+				&& 
+				aj.waste(areaToBePainted) < dp.waste(areaToBePainted)) {
+			return "AverageJoe wastes: " + aj.waste(areaToBePainted) + " and is the lowest wasted";
+		}
+		return dp.name + " wastes: " + dp.waste(areaToBePainted) + " and is the lowest wasted";
+	}
+}

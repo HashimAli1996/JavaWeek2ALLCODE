@@ -1,0 +1,32 @@
+
+public class CheapoMax extends Paint {
+	
+	double price = 19.99;
+	int areaPerLitre = 10;
+	int paintLitre = 20;
+	
+	@Override
+	public double tubsOfPaint(int areaToBePainted) {
+
+		double top = 0;
+		
+		if(areaToBePainted != 0) {
+			
+			double litresRequired = areaToBePainted / areaPerLitre;
+						
+			if (litresRequired >= paintLitre) {
+				top = litresRequired / paintLitre;
+				if(litresRequired % paintLitre != 0) {
+					top += 1;
+				}
+			} else {
+				top += 1;
+			}
+		} else {
+			System.out.println("No Paint Required");
+		}
+		return top * price;
+	}
+	
+
+}

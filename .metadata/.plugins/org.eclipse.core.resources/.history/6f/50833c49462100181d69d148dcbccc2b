@@ -1,0 +1,8 @@
+
+public class DuluxPaints {
+	
+	double price = 25.00;
+	int areaPerLitre = 20;
+	int paintLitre = 10;
+	
+}

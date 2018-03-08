@@ -1,0 +1,9 @@
+
+public class CheapoMax extends Paint {
+	
+	double price = 19.99;
+	int areaPerLitre = 10;
+	int paintLitre = 20;
+	
+
+}

@@ -1,0 +1,42 @@
+
+public class PaintWizard {
+
+		double cheapoMaxPrice = 19.99;
+		double averageJoePrice = 17.99;
+		double duluxPaints = 25.00;
+		
+		int cpAreaPerLitre = 10;
+		int ajAreaPerLitre = 11;
+		int dpAreaPerLitre = 20;
+		
+		int cpLitre = 20;
+		int ajLitre = 15;
+		int dpLitre = 10;
+		
+	
+	public static void main(String[] args) {
+		
+		CheapoMax cp = new CheapoMax();
+		AverageJoe aj = new AverageJoe();
+		DuluxPaints dp = new DuluxPaints();
+		
+		System.out.println(cheapestTubOfPaint(100, cp, aj, dp));
+		
+	}
+	
+	public static String cheapestTubOfPaint(int areaToBePainted, CheapoMax cp, AverageJoe aj, DuluxPaints dp) {
+		cp.tubsOfPaint(areaToBePainted);
+		
+		
+		if (cp.tubsOfPaint(areaToBePainted) < aj.tubsOfPaint(areaToBePainted) 
+				&& 
+				cp.tubsOfPaint(areaToBePainted) < dp.tubsOfPaint(areaToBePainted)) {
+			return "CheapoMax costs: " + cp.tubsOfPaint(areaToBePainted) + " and is the cheapest";
+		} else if (aj.tubsOfPaint(areaToBePainted) < cp.tubsOfPaint(areaToBePainted) 
+				&& 
+				aj.tubsOfPaint(areaToBePainted) < dp.tubsOfPaint(areaToBePainted)) {
+			return "AverageJoe costs: " + aj.tubsOfPaint(areaToBePainted) + " and is the cheapest";
+		}
+		return "DuluxPaint costs: " + dp.tubsOfPaint(areaToBePainted) + " and is the cheapest";
+	}	
+}

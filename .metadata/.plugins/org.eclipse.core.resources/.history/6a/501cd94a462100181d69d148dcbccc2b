@@ -1,0 +1,15 @@
+
+public abstract class Paint {
+	
+	double price;
+	int areaPerLitre;
+	int paintLitre;
+	
+	
+	public Paint() {
+		
+	}
+	
+	public void tubsOfPaint(int areaToBePainted) {}
+
+}

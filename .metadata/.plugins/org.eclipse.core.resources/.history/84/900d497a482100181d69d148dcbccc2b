@@ -1,0 +1,39 @@
+
+public abstract class Paint {
+	
+	double price;
+	double areaPerLitre;
+	double paintLitre;
+	
+	
+	public Paint() {
+		
+	}
+	
+public double tubsOfPaint(double areaToBePainted) {
+		
+		if(areaToBePainted != 0) {
+			
+			int litresRequired = areaToBePainted / areaPerLitre;
+			double top = 0;
+			
+			if (litresRequired >= paintLitre) {
+				
+				top = litresRequired / paintLitre;
+				
+				if(litresRequired % paintLitre != 0) {
+					top += 1;
+				}
+				
+			} else {
+				top += 1;
+				return top * price;
+			}
+			
+			//return top;
+		} else {
+			System.out.println("No Paint Required");
+		}
+	}
+
+}

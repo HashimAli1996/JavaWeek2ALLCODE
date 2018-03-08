@@ -1,0 +1,49 @@
+
+public class AverageJoe extends Paint{
+	
+	double price = 17.99;
+	int areaPerLitre = 11;
+	int paintLitre = 15;
+	
+	@Override
+	public double tubsOfPaint(int areaToBePainted) {
+
+		double top = 0;
+		
+		if(areaToBePainted != 0) {
+			
+			int litresRequired = areaToBePainted / areaPerLitre;
+						
+			if (litresRequired >= paintLitre) {
+				top = litresRequired / paintLitre;
+				if(litresRequired % paintLitre != 0) {
+					top += 1;
+				}
+			} else {
+				top += 1;
+			}
+		} else {
+			System.out.println("No Paint Required");
+		}
+		return top * price;
+	}
+	
+	public double waste(int areaToBePainted) {
+
+		double litresWasted = 0;
+		
+		if(areaToBePainted != 0) {
+			
+			double litresRequired = areaToBePainted / areaPerLitre;
+						
+			if (litresRequired >= paintLitre) {
+				litresWasted = litresRequired % paintLitre;
+				
+			} else {
+				System.out.println("No Paint Wasted");
+			}
+		}
+		return litresWasted;
+	}
+	
+}

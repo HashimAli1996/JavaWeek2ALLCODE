@@ -1,0 +1,15 @@
+
+public class Ship {
+	
+	
+	public Ship() {
+		
+	}
+	
+	public int addCoordinates() {
+		
+	}
+	
+	//https://github.com/cosenary/Battleship/blob/master/battleship/Field.java
+	
+}

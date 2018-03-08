@@ -1,0 +1,21 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import Intro.LevelTwoIntermediate;
+
+public class LvlTwoTests {
+
+	@Test
+	
+	public void blackJackTest() {
+		
+		int result = LevelTwoIntermediate.blackJack(0, 0);
+		
+		assertEquals(5, result);		
+		
+	}
+
+}

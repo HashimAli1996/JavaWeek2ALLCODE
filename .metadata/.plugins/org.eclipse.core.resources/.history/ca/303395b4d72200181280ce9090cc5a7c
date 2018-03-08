@@ -1,0 +1,25 @@
+
+public class Ships {
+	
+	int patrolBoat;
+	int patrolBoatTwo;
+	int battleship;
+	int battleshipTwo;
+	int submarine;
+	int destroyer;
+	int carrier;
+	
+	public Ships() {
+		
+	}
+	
+	public int addCoordinates() {
+		
+		
+		
+		
+		
+		return 0;
+	}
+	
+}

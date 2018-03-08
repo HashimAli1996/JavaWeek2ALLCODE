@@ -1,0 +1,8 @@
+
+public class DuluxPaints {
+	
+	double price = 25.00;
+	double areaPerLitre = 20;
+	double paintLitre = 10;
+	
+}

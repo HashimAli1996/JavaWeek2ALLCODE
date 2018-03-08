@@ -1,0 +1,15 @@
+
+public abstract class Paint {
+	
+	double price;
+	double areaPerLitre;
+	double paintLitre;
+	
+	
+	public Paint() {
+		
+	}
+	
+	public abstract double tubsOfPaint();
+
+}

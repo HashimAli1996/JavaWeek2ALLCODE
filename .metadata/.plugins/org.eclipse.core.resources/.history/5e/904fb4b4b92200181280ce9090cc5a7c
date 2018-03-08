@@ -1,0 +1,29 @@
+package spiral;
+
+import java.util.Scanner; 
+
+
+
+public class Spiral {
+	
+	public static int[][] moveUp
+	
+	
+	public static int userInput() { 
+		Scanner sc = new Scanner(System.in);
+		int dimensions = sc.nextInt(); 
+		return dimensions;
+	}
+	public static int[][] arrayGenerator() {
+		return new int[userInput()][userInput()];
+		
+	}
+	public static int[][] fillWithNumbers() {
+		int[][] array = arrayGenerator();
+		int dimensions = userInput();
+		
+		
+	}
+	
+
+}

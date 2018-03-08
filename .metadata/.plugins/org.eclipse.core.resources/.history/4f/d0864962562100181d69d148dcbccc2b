@@ -1,0 +1,46 @@
+
+public class DuluxPaints extends Paint{
+	
+	double price = 25.00;
+	int areaPerLitre = 20;
+	int paintLitre = 10;
+	
+	@Override
+	public double tubsOfPaint(int areaToBePainted) {
+
+		double top = 0;
+		
+		if(areaToBePainted != 0) {
+			
+			int litresRequired = areaToBePainted / areaPerLitre;
+						
+			if (litresRequired >= paintLitre) {
+				top = litresRequired / paintLitre;
+				if(litresRequired % paintLitre != 0) {
+					top += 1;
+				}
+			} else {
+				top += 1;
+			}
+		} else {
+			System.out.println("No Paint Required");
+		}
+		return top * price;
+	}
+	
+	public double waste(int areaToBePainted) {
+
+		double litresWasted = 0;
+		
+		if(areaToBePainted != 0) {
+			
+			double litresRequired = areaToBePainted / areaPerLitre;
+						
+			
+			litresWasted = litresRequired % paintLitre;
+			
+		}
+		return litresWasted;
+	}
+	
+}

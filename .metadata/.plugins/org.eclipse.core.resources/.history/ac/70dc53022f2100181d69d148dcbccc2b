@@ -1,0 +1,51 @@
+package Intro;
+
+public class LevelTwoIntermediate {
+
+	public static void main(String[] args) {
+		//blackJack(0, 0);
+		uniqueSum(1,2,3);
+	}
+	
+	
+	public static void blackJack(int a, int b) {
+		if(a > 21 && b > 21) {
+			System.out.println(0);
+		} else if(a == 0 && b == 0) {
+			System.out.println(0);
+		} else {
+			if(a > b) {
+				System.out.println(a);
+			} else {
+				System.out.println(b);
+			}
+		}
+	}
+	
+	public static int uniqueSum(int a, int b, int c) {
+		int sum = 0;
+		if ((a == b) && (a == c)) 
+		{
+			System.out.println(0);
+		} else if (a == b) 
+		{
+			sum = b + c;
+			System.out.println(sum);					
+		} else if (a == c) 
+		{
+			sum = b + c;
+			System.out.println(sum);
+		} else if (b == c) 
+		{
+			sum = a + c;
+			System.out.println(sum);
+		} else 
+		{
+			sum = a + b + c;
+			System.out.println(sum);
+		}
+		
+		return sum;
+	}
+
+}

@@ -1,0 +1,34 @@
+
+public class PaintWizard {
+
+	
+	public static void main(String[] args) {
+		
+		double cheapoMaxPrice = 19.99;
+		double averageJoePrice = 17.99;
+		double duluxPaints = 25.00;
+		
+		int cpAreaPerLitre = 10;
+		int ajAreaPerLitre = 11;
+		int dpAreaPerLitre = 20;
+		
+		int cpLitre = 20;
+		int ajLitre = 15;
+		int dpLitre = 10;
+		
+		
+		
+		System.out.println(30/20);
+		
+	}
+	
+	
+	public void tubsOfPaint() {
+		
+		
+	}
+	
+	public void leastPaintWasted() {
+		
+	}
+}

@@ -1,0 +1,51 @@
+ 
+public class Paint {
+	
+	String name;
+	double price;
+	int areaPerLitre;
+	int paintLitre;
+	
+	
+	public Paint(String name, double price, int areaPerLitre, int paintLitre) {
+		this.name = name;
+		this.price = price;
+		this.areaPerLitre = areaPerLitre;
+		this.paintLitre = paintLitre;
+	}
+
+	public double tubsOfPaint(int areaToBePainted) {
+
+		double top = 0;
+		
+		if(areaToBePainted != 0) {
+			
+			double litresRequired = areaToBePainted / areaPerLitre;
+						
+			if (litresRequired >= paintLitre) {
+				top = litresRequired / paintLitre;
+				if(litresRequired % paintLitre != 0) {
+					top += 1;
+				}
+			} else {
+				top += 1;
+			}
+		} else {
+			System.out.println("No Paint Required");
+		}
+		return (int)top * price;
+	}
+	
+	public double waste(int areaToBePainted) {
+
+		double litresWasted = 0;
+		
+		if(areaToBePainted != 0) {
+			
+			double litresRequired = areaToBePainted / areaPerLitre;
+						
+			litresWasted = litresRequired % paintLitre;
+		}
+		return litresWasted;
+	}
+}

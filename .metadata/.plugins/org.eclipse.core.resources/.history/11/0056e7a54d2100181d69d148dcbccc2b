@@ -1,0 +1,49 @@
+
+public class PaintWizard {
+
+		double cheapoMaxPrice = 19.99;
+		double averageJoePrice = 17.99;
+		double duluxPaints = 25.00;
+		
+		int cpAreaPerLitre = 10;
+		int ajAreaPerLitre = 11;
+		int dpAreaPerLitre = 20;
+		
+		int cpLitre = 20;
+		int ajLitre = 15;
+		int dpLitre = 10;
+		
+	
+	public static void main(String[] args) {
+		
+		CheapoMax cp = new CheapoMax();
+		System.out.println(cp.tubsOfPaint(200.0));
+		
+	}
+	
+	public void tubsOfPaint(int areaToBePainted) {
+		
+		if(areaToBePainted != 0) {
+			
+			int litresRequired = areaToBePainted / cpAreaPerLitre;
+			int top = 0;
+			
+			if (litresRequired >= cpLitre) {
+				
+				top = litresRequired / cpLitre;
+				
+				if(litresRequired % cpLitre != 0) {
+					top += 1;
+				}
+				
+			} else {
+				top += 1;
+			}
+		} else {
+			System.out.println("No Paint Required");
+		}
+		
+		
+		
+	}	
+}

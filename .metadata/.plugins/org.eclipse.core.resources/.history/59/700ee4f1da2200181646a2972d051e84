@@ -1,0 +1,11 @@
+
+public abstract class Ships {
+	
+	
+	public Ships() {}
+	
+	public abstract int addCoordinates();
+	
+	//https://github.com/cosenary/Battleship/blob/master/battleship/Field.java
+	
+}

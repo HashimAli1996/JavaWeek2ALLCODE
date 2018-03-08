@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Ships {
+	
+	int patrolBoat;
+	int patrolBoatTwo;
+	int battleship;
+	int battleshipTwo;
+	int submarine;
+	int destroyer;
+	int carrier;
+	
+	public Ships() {
+		
+	}
+	
+	public int addCoordinates() {
+		
+		System.out.println("Initialise your fleet! Enter Coordinates for each ship: ");
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Patrol Boat ones Coordinates:");
+		patrolBoat = sc.nextInt();
+		patrolBoatTwo = sc.nextInt();
+		battleship = sc.nextInt();
+		battleshipTwo = sc.nextInt();
+		submarine = sc.nextInt();
+		destroyer = sc.nextInt();
+		carrier = sc.nextInt();
+		
+		
+		
+		return 0;
+	}
+	
+}

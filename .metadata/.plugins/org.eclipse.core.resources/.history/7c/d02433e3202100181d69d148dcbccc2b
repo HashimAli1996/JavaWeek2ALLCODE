@@ -1,0 +1,10 @@
+
+public class PaintWizard {
+
+	
+	public static void main(String[] args) {
+		int sum = 100 % 11;
+		
+		System.out.println(sum);
+	}
+}

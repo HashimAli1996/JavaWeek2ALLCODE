@@ -1,3 +1,4 @@
+package rOCKpAPERsCISSORS;
 
 public class Manager {
 

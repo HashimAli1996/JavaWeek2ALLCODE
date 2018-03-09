@@ -1,3 +1,4 @@
+package rOCKpAPERsCISSORS;
 import java.util.Scanner;
 
 public class Player {

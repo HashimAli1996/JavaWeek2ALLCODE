@@ -1,3 +1,4 @@
+package rOCKpAPERsCISSORS;
 import java.util.Random;
 
 public class Computer extends Player {
